@@ -6,15 +6,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class TestStats {
-
+public class T20Stats {
     HashMap<String, ArrayList<String>> playerStats = new HashMap<>();
     ArrayList<String> pName = new ArrayList<>();
     ArrayList<String> pRuns = new ArrayList<>();
     ArrayList<String> pAvg = new ArrayList<>();
-    BufferedReader br = new BufferedReader(new FileReader("test.csv"));
+    BufferedReader br = new BufferedReader(new FileReader("t20.csv"));
 
-    public TestStats() throws IOException {
+    public T20Stats() throws IOException {
         String line;
         String splitBy = ",";
         while ((line = br.readLine()) != null) {
@@ -38,5 +37,4 @@ public class TestStats {
     public HashMap<String, ArrayList<String>> returnHash() {
         return playerStats;
     }
-
 }
